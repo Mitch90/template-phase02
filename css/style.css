@@ -1,0 +1,29 @@
+/* General styles */
+:root {
+    --main-color: #2DBBB3;
+    --light-color: #FFFFFF;
+}
+
+.absolute {
+    position: absolute;
+}
+
+/* Cover styles */
+.cover-img {
+    min-height:  540px;
+    margin-bottom: 50px;
+    background: url("https://placeholdit.imgix.net/~text?txtsize=117&bg=fed766&txt=1400%C3%97900&w=1400&h=900") no-repeat top center fixed;
+    background-size: cover;
+}
+
+/* Menu styles */
+.menu-btn {
+    background-color: var(--main-color);
+    border: none;
+    color: var(--light-color);
+    left: ;
+    position: absolute;
+    top: 0;
+}
+.menu-icon {
+}
