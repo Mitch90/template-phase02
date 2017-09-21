@@ -2,6 +2,7 @@
 :root {
     --main-color: #2DBBB3;
     --light-color: #FFFFFF;
+    --dark-color: #000000;
 }
 
 .absolute {
@@ -18,12 +19,22 @@
 
 /* Menu styles */
 .menu-btn {
-    background-color: var(--main-color);
+    background: none;
     border: none;
-    color: var(--light-color);
-    left: ;
+    color: var(--dark-color);
+    cursor: pointer;
+    left: 1.2rem;
     position: absolute;
-    top: 0;
+    top: 1.5rem;
 }
-.menu-icon {
+.menu-svg {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+}
+.menu-svg:last-of-type {
+    left: 8px;
+}
+.scaled {
+    -webkit-transform: scale(0);
+            transform: scale(0);
 }
