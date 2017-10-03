@@ -4,17 +4,24 @@
     --light-color: #FFFFFF;
     --dark-color: #000000;
 }
-h5 {
-    font-size: 1.05rem;
+.sans-font h5 {
+    font-size: 1.1rem;
+    margin-bottom: 1.4rem;
+}
+.serif-font h5 {
+    font-size: 1.25rem;
+}
+p {
+    font-size: 1.4rem;
 }
 .absolute {
     position: absolute;
 }
 .sans-font {
-    font-family: 'Muli', sans-serif;
+    font-family: 'Karla', sans-serif;
 }
 .serif-font {
-    font-family: 'Libre Baskerville', serif;
+    font-family: 'Crimson Text', serif;
 }
 
 /* Cover styles */
@@ -142,4 +149,55 @@ h5 {
     margin-bottom: 15px;
     margin-top: 10px;
     padding-left: 10px;
+}
+
+/* Main content styles */
+.intro-container h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1;
+    margin: 4rem 0 7rem;
+}
+.intro-container h5 {
+    color: var(--main-color);
+}
+.intro-description {
+    -webkit-column-count: 2;
+            column-count: 2;
+    -webkit-column-gap: 24px;
+            column-gap: 24px;
+    margin-bottom: 6rem;
+}
+.intro-container h3 {
+    color: var(--main-color);
+    font-size: 1.2rem;
+    margin-bottom: 6rem;
+    text-transform: uppercase;
+}
+.intro-container h3 span{
+    border-bottom: 2px solid;
+    padding: 0 10px 15px;
+}
+.map-svg {
+    width: 50%;
+    margin: 0 25%;
+}
+.map-line {
+    fill: none;
+    stroke: var(--main-color);
+    stroke-width: 3px;
+    stroke-miterlimit: 10;
+}
+.map-btn {
+    cursor: pointer;
+}
+.map-box {
+    fill: var(--light-color);
+    stroke: var(--dark-color);
+    stroke-width: 2px;
+    stroke-miterlimit: 10;
+}
+.map-text {
+    font-size: 3rem;
+    font-weight: 700;
 }
