@@ -1,0 +1,145 @@
+/* General styles */
+:root {
+    --main-color: #007BFF;
+    --light-color: #FFFFFF;
+    --dark-color: #000000;
+}
+h5 {
+    font-size: 1.05rem;
+}
+.absolute {
+    position: absolute;
+}
+.sans-font {
+    font-family: 'Muli', sans-serif;
+}
+.serif-font {
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Cover styles */
+.cover-img {
+    min-height:  540px;
+    margin-bottom: 50px;
+    background: url("https://placeholdit.co//i/1400x900?bg=007BFF&fc=FFFFFF&text=Placeholder-Image") no-repeat top center fixed;
+    background-size: cover;
+}
+
+/* Menu styles */
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    left: 1.2rem;
+    position: absolute;
+    top: 1.5rem;
+    z-index: 1;
+}
+.menu-svg {
+    opacity: 1;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+.menu-svg path {
+    fill: none;
+    stroke: var(--dark-color);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-width: 4px;
+}
+.menu-btn:hover .icon-visible {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+}
+.close-icon {
+    left: 8px;
+}
+.close-icon path {
+    stroke: var(--light-color);
+}
+.scaled {
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+}
+
+/* Sidebar styles */
+.sidebar {
+    background-color: var(--dark-color);
+    height: 100vh;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    -webkit-transition: all 0.75s cubic-bezier(.6,0,.5,1);
+            transition: all 0.75s cubic-bezier(.6,0,.5,1);
+}
+.nav-closed {
+    width: 0vw;
+}
+.nav-open {
+    width: 100vw;
+}
+.sidebar ul {
+    color: var(--light-color);
+    list-style-type: decimal;
+}
+.sidebar a {
+    color: var(--main-color);
+    padding-left: 0;
+    position: relative;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.sidebar a::before {
+    background-color: var(--main-color);
+    bottom: -2px;
+    content: '';
+    height: 1px;
+    left: 10px;
+    position: absolute;
+    -webkit-transform: scale3d(0,1,1);
+            transform: scale3d(0,1,1);
+    -webkit-transform-origin: 100% 50%;
+            transform-origin: 100% 50%;
+    -webkit-transition: transform 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    width: 75px;
+}
+.sidebar a:hover {
+    padding-left: 10px;
+    text-decoration: none;
+}
+.sidebar a:hover::before {
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+    -webkit-transform: scale3d(1,1,1);
+            transform: scale3d(1,1,1);
+}
+.sidebar-index {
+    margin-top: 15vh;
+    padding-left: calc(1.2rem + 8px);
+    width: 45vw;
+}
+.sidebar-home {
+    margin-bottom: 35px;
+}
+.sidebar-title {
+    color: var(--light-color);
+}
+.sidebar-list h5 {
+    color: var(--light-color);
+}
+.sidebar-list li {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
