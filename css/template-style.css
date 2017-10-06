@@ -352,8 +352,12 @@ article {
     position: relative;
     top: -1.2rem;
 }
-.sticky-top {
-    top: 4rem;
+.list-group {
+    position: relative;
+}
+.sidelist-fixed {
+    position: fixed;
+    top: 64px;
 }
 .list-group-item,
 .list-group-item-action {
@@ -434,7 +438,7 @@ article {
 }
 .section-content h3 {
     color: var(--main-color);
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
@@ -447,7 +451,7 @@ article {
     margin-bottom: 2rem;
 }
 .section-content h4 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 .section-content h4 a{
     position: relative;
@@ -523,6 +527,12 @@ article {
     footer .img-poli {
         height: auto;
         width: 100%;
+    }
+    .section-content h3 {
+        font-size: 1.25rem;
+    }
+    .section-content h4 {
+        font-size: 1.2rem;
     }
 }
 

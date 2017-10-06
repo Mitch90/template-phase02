@@ -49,14 +49,14 @@
         <div class="container sans-font">
             <div class="row">
                 <div class="col-md-10 col-lg-9 ml-auto question-box">
-                    <div class="row arrows-container justify-content-between first-question">
-                        <div class="arrow-left">
+                    <div class="row arrows-container justify-content-end justify-content-md-between first-question">
+                        <div class="arrow-left mr-5 mr-md-0">
                             <h5>
                                 <i class="fa fa-angle-left" aria-hidden="true"></i>
                                 <a>prev</a>
                             </h5>
                         </div>
-                        <div class="arrow-right">
+                        <div class="arrow-right mr-2 mr-sm-0">
                             <h5>
                                 <a>next</a>
                                 <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -115,7 +115,7 @@
     <main class="container-fluid">
         <div class="viz-container">
             <!-- Add your viz here -->
-            <img class="viz-example" src="https://placeholdit.co//i/1400x650?bg=007BFF&fc=FFFFFF&text=Viz_answering_research_qustion"/>
+            <img class="viz-example" src="https://placeholdit.co//i/1400x650?bg=007BFF&fc=FFFFFF&text=Viz_answering_research_question"/>
         </div>
     </main>
 
@@ -123,7 +123,7 @@
         <div class="row">
             <!-- Side scrolling menu -->
             <div id="sidelist" class="col-md-3 text-uppercase d-none d-md-block sans-font">
-                <div class="list-group sticky-top">
+                <div class="list-group">
                     <a class="list-group-item list-group-item-action smooth-scroll" href="#description"><span>Description</span></a>
                     <a class="list-group-item list-group-item-action smooth-scroll" href="#protocol"><span>Protocol</span></a>
                     <a class="list-group-item list-group-item-action smooth-scroll" href="#data"><span>Data</span></a>
@@ -257,7 +257,7 @@
             $(this).attr("href", url);
         });
 
-        // Add smooth scrolling on all links inside the navbar
+        // Add smooth scrolling on all links inside the sidelist
         $('.list-group a[href*="#"]:not([href="#"])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
                 var target = $(this.hash);
@@ -268,6 +268,18 @@
                     }, 1000);
                     return false;
               }
+            }
+        });
+    });
+    $( window ).on( "load", function() {
+        // Add smooth scrolling back to top
+        var offsetSidelist = $('.list-group').offset().top - 64;
+
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= offsetSidelist) {
+                $('.list-group').addClass('sidelist-fixed');
+            } else {
+                $('.list-group').removeClass('sidelist-fixed');
             }
         });
     });

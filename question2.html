@@ -49,14 +49,14 @@
         <div class="container sans-font">
             <div class="row">
                 <div class="col-md-10 col-lg-9 ml-auto question-box">
-                    <div class="row arrows-container justify-content-between">
-                        <div class="arrow-left">
+                    <div class="row arrows-container justify-content-end justify-content-md-between">
+                        <div class="arrow-left mr-5 mr-md-0">
                             <h5>
                                 <i class="fa fa-angle-left" aria-hidden="true"></i>
                                 <a>prev</a>
                             </h5>
                         </div>
-                        <div class="arrow-right">
+                        <div class="arrow-right mr-2 mr-sm-0">
                             <h5>
                                 <a>next</a>
                                 <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -257,7 +257,7 @@
             $(this).attr("href", url);
         });
 
-        // Add smooth scrolling on all links inside the navbar
+        // Add smooth scrolling on all links inside the sidelist
         $('.list-group a[href*="#"]:not([href="#"])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
                 var target = $(this.hash);
@@ -268,6 +268,18 @@
                     }, 1000);
                     return false;
               }
+            }
+        });
+    });
+    $( window ).on( "load", function() {
+        // Add smooth scrolling back to top
+        var offsetSidelist = $('.list-group').offset().top - 64;
+
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= offsetSidelist) {
+                $('.list-group').addClass('sidelist-fixed');
+            } else {
+                $('.list-group').removeClass('sidelist-fixed');
             }
         });
     });
