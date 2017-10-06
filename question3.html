@@ -271,9 +271,10 @@
             }
         });
     });
+    var offsetSidelist;
     $( window ).on( "load", function() {
         // Add smooth scrolling back to top
-        var offsetSidelist = $('.list-group').offset().top - 64;
+        offsetSidelist = $('.list-group').offset().top - 64;
 
         $(window).scroll(function() {
             if ($(this).scrollTop() >= offsetSidelist) {
@@ -282,6 +283,9 @@
                 $('.list-group').removeClass('sidelist-fixed');
             }
         });
+    });
+    $( window ).resize(function() {
+        offsetSidelist = $('.list-group').offset().top - 64;
     });
     </script>
     <!-- Your custom Javascript -->
