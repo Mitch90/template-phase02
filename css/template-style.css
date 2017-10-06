@@ -18,7 +18,6 @@ p {
     font-size: 1.05rem;
     line-height: 2;
     letter-spacing: 0.2px;
-    padding: 0 2rem;
 }
 a:hover,
 a:focus {
@@ -199,9 +198,12 @@ a:visited {
     margin-bottom: 6rem;
     text-transform: uppercase;
 }
-.intro-container h3 span{
+.intro-container h3 span {
     border-bottom: 2px solid;
     padding: 0 10px 10px;
+}
+.intro-container p {
+    padding: 0 2rem;
 }
 .intro-map {
     margin-bottom: 6rem;
@@ -329,14 +331,11 @@ header .header-subtitle {
     margin-bottom: 0.8rem;
 }
 header .header-title {
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-weight: 700;
     margin-bottom: 2rem;
 }
 /* Viz styles */
-.viz-container {
-    min-height: 650px;
-}
 .viz-example {
     width: 100%;
 }
@@ -347,7 +346,7 @@ header .header-title {
 }
 /* Article styles */
 article {
-    margin-top: 4rem;
+    margin-top: 6rem;
 }
 #sidelist {
     position: relative;
@@ -493,6 +492,9 @@ article {
         margin-left: 50%;
         width: 28%;
     }
+    header .header-title {
+        font-size: 3rem;
+    }
 }
 
 /*Medium devices (tablets, 768px and up)*/
@@ -528,7 +530,6 @@ article {
 @media (min-width: 992px) {
     p {
         line-height: 1.8;
-        padding: 0 1rem;
     }
     .sidebar-index {
         width: 50vw;
@@ -538,6 +539,9 @@ article {
     }
     .intro-container h5 {
         padding-top: 5rem;
+    }
+    .intro-container p {
+        padding: 0 1rem;
     }
     .intro-description {
         -webkit-column-count: 2;
