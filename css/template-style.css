@@ -241,10 +241,12 @@ footer {
     padding: 3rem 0 1.5rem;
 }
 footer .img-density {
-    width: 60%;
+    height: 80px;
+    width: auto;
 }
 footer .img-poli {
-    max-width: 100%;
+    height: 80px;
+    width: auto;
 }
 footer h4 {
     font-size: 0.7em;
@@ -255,6 +257,7 @@ footer h4 {
 footer ul {
     font-size: 0.7rem;
     list-style-type: none;
+    margin-bottom: 0;
     padding: 0;
 }
 
@@ -485,7 +488,11 @@ article {
 /* Media queries */
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
-    
+    footer .img-density {
+        height: auto;
+        margin-left: 50%;
+        width: 28%;
+    }
 }
 
 /*Medium devices (tablets, 768px and up)*/
@@ -506,6 +513,14 @@ article {
     .map-svg {
         width: 68%;
         margin: 0 16%;
+    }
+    footer .img-density {
+        margin-left: 0;
+        width: 60%;
+    }
+    footer .img-poli {
+        height: auto;
+        width: 100%;
     }
 }
 
@@ -536,6 +551,10 @@ article {
     }
     footer .img-density {
         width: 52%;
+    }
+    footer .img-poli {
+        height: 80px;
+        width: auto;
     }
     footer h4 {
         font-size: 0.8em;
